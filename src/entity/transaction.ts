@@ -7,6 +7,9 @@ export class Transaction {
   id: number;
 
   @Column()
+  transaction_id: number;
+
+  @Column()
   date: Date;
 
   @Column()
@@ -17,6 +20,9 @@ export class Transaction {
 
   @Column()
   user_id: string;
+
+  @Column({ default: false})
+  flagged: boolean;
 
   @CreateDateColumn({ type: 'timestamp' })
   created_at: Date;
